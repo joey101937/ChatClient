@@ -20,7 +20,7 @@ public class ChatFrame {
     private JPanel panel;
     private JScrollPane scrollPane;
     private JPanel interior;
-    private JTextPane textPane;
+    private JPanel message = new MessagePanel("testing \n testing testing \n testing testing \n testing testing \n testing testing \n testing \n testing \n testing \n testing \n testing \n testing \n testing \n testing \n final test");
     
     private void initComponents(){
         core = new JFrame();
@@ -53,11 +53,8 @@ public class ChatFrame {
         panel.add(scrollPane);
         
         
-        textPane = new JTextPane();
-        textPane.setBackground(Color.red);
-        textPane.setSize(interior.getSize());
-        textPane.setPreferredSize(interior.getSize());
-        interior.add(textPane);
+        
+        interior.add(message);
         
         core.setVisible(true);
         
