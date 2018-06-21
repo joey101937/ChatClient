@@ -19,8 +19,9 @@ import javax.swing.JPanel;
 public class MessagePanel extends JPanel{
     private String message = "";
     private ArrayList<JLabel> lines = new ArrayList<>();
+    private Author author = null;
     /**
-     * Constructor
+     * Constructor with no author
      * @param m Set initial message to this string
      */
     public MessagePanel(String m){
@@ -32,6 +33,23 @@ public class MessagePanel extends JPanel{
         setText(m);
         this.setVisible(true);
     }
+    /**
+     * Constructor with defined author
+     * @param m message text
+     * @param a author
+     */
+    public MessagePanel(String m, Author a){
+        message = m;
+        author = a;
+        this.setSize(300, 200);
+        this.setPreferredSize(getSize());
+        this.setBackground(new Color(90,90,200));
+        this.setLayout(null);
+        setText(m);
+        this.setVisible(true);
+    }
+    
+    
     
     private void setText(String s){
         String[] strings = s.split("\n");

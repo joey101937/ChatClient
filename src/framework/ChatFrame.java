@@ -65,6 +65,12 @@ public class ChatFrame {
     
     public static void main(String[] args){
         ChatFrame cf = new ChatFrame();
+    }
+    /**
+     * adds a message to the chat log
+     * @param mp 
+     */
+    public void addMessage(MessagePanel mp){
         
     }
 }
